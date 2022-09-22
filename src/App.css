@@ -1,8 +1,9 @@
 .login-button {
     display: flex;
     justify-content: flex-end;
-    font-size: 20px;
+    align-items: center;
     margin: 20px 20px 0 0;
+    font-size: 20px;
     cursor: pointer;
 }
 .nav-section {
@@ -42,10 +43,15 @@
 .search-box input:focus {
     outline: none;
 }
-.product-img {
+.product-detail-img {
     display: flex;
     justify-content: flex-end;
 }
 .product-information {
     margin-bottom: 10px;
+}
+.product-all-img img {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
 }

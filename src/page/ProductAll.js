@@ -5,10 +5,10 @@ import { useSearchParams } from 'react-router-dom';
 
 const ProductAll = () => {
     const [productList, setProductList] = useState([]);
-    const [query,setQuery] =useSearchParams()
+    const [query, setQuery] = useSearchParams();
     const getProducts = async () => {
-        let searchQuery =query.get('q') ||  ''
-        console.log('쿼리값은?',searchQuery)
+        let searchQuery = query.get('q') || '';
+        console.log('쿼리값은?', searchQuery);
         let url = ` https://my-json-server.typicode.com/Mun-Seok/front-hnm/products?q=${searchQuery}`;
         let response = await fetch(url);
         let data = await response.json();
@@ -23,7 +23,7 @@ const ProductAll = () => {
             <Container>
                 <Row>
                     {productList.map((item) => (
-                        <Col lg={3}>
+                        <Col lg={3} className="product-all-img">
                             <ProductCard item={item} />
                         </Col>
                     ))}

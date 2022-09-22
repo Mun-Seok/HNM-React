@@ -18,23 +18,20 @@ const ProductDetail = () => {
     return (
         <Container>
             <Row>
-                <Col className="product-img">
-                    <img src={product?.img} />
+                <Col className="product-detail-img">
+                    <img src={product?.img} alt="제품 사진" />
                 </Col>
                 <Col>
                     <div>{product?.title}</div>
                     <div>\{product?.price}</div>
-                    {/* <div>{product.choice? 'Conscious choice' : ''}</div>
-                    <div>{product.new? '신제품' : ''}</div> */}
+                    <div>{product.choice ? 'Conscious choice' : ''}</div>
+                    <div>{product.new ? '신제품' : ''}</div>
                     <Dropdown>
                         <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
                             사이즈 선택
                         </Dropdown.Toggle>
 
-                        <Dropdown.Menu>
-                            {product?.size.length > 0 && product.size.map((item) => 
-                                (<Dropdown.Item href="#/action-1">{item}</Dropdown.Item>))}
-                        </Dropdown.Menu>
+                        <Dropdown.Menu>{product?.size.length > 0 && product.size.map((item) => <Dropdown.Item href="#/action-1">{item}</Dropdown.Item>)}</Dropdown.Menu>
                     </Dropdown>
                 </Col>
             </Row>
